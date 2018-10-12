@@ -8,6 +8,7 @@ function [D]=density_scatter(A,B,R,dotsize)
           end
       end
       AB=[A B];
+      %calculate the distance of each other for each dot of AB.
       distmat=squareform(pdist(AB));
       C=sum(distmat<=R,2);
       D=max(C);
