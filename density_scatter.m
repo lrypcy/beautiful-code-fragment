@@ -1,4 +1,4 @@
-function [D]=denscatter(A,B,R,dotsize)
+function [D]=density_scatter(A,B,R,dotsize)
       %% A and B are columns vectors, R is the radious for count dots since current dot
       if nargin<3
           R=10;
