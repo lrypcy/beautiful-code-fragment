@@ -1,0 +1,9 @@
+
+//wonderful code
+//https://leetcode.com/problems/sort-array-by-parity-ii/discuss/181158/C%2B%2B-5-lines-two-pointers-%2B-2-liner-bonus
+vector<int> sortArrayByParityII(vector<int>& A) {
+  for (int i = 0, j = 0; i < A.size(); ) swap(
+      *find_if(begin(A) + i, end(A), [&i] (int v) { return i++ % 2 == 0 && v % 2 != 0; }),
+      *find_if(begin(A) + j, end(A), [&j] (int v) { return j++ % 2 != 0 && v % 2 == 0; }));
+  return A;
+} 
